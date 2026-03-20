@@ -120,7 +120,7 @@ def train_best_model():
         'regressor__learning_rate': [0.05, 0.1]
     }
     cv = KFold(n_splits=5, shuffle=True, random_state=42)
-    grid_search = GridSearchCV(main_pipe, param_grid, cv=cv, scoring='neg_mean_absolute_error', n_jobs=-1)
+    grid_search = GridSearchCV(main_pipe, param_grid, cv=cv, scoring='neg_mean_absolute_error')
     grid_search.fit(X_train, y_train)
     return grid_search
 
