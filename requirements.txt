@@ -1,8 +1,9 @@
 pandas
 numpy
-streamlit
+streamlit>=1.20.0
 matplotlib
 seaborn
 xgboost
 lightgbm
 scikit-learn
+altair<5.0.0
